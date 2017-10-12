@@ -17,14 +17,14 @@ title: Emily Tiry
 author: Emily Tiry
 description: Personal website and resume
 avatar: profile.jpg
-email: yourname@email.com
+email: emilytiry@gmail.com
 github: etiry # username
 twitter: EKTiry
-linkedin: username
+linkedin: emily-tiry
 #stackoverflow: username   #e.g: users/2735833/proton1h1
 #Comment out if you don't want disqus 
 #disqus: username
-google_analytics: UA-69391421-1
+google_analytics: UA-108098167-1
 
 
 # needed for travis-ci build
