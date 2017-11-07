@@ -15,7 +15,7 @@ url: http://www.emilytiry.com/
 baseurl: http://www.emilytiry.com/
 title: Emily Tiry
 author: Emily Tiry
-description: Personal website and resume
+description: Emily Tiry's personal website and resume
 avatar: profile.jpg
 email: emilytiry@gmail.com
 github: etiry # username
@@ -29,3 +29,6 @@ google_analytics: UA-108098167-1
 
 # needed for travis-ci build
 exclude: [vendor]
+
+plugins:
+  - jekyll-seo-tag
