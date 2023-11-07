@@ -1,0 +1,25 @@
+---
+const links = [
+  {
+    name: 'About',
+    href: '#about'
+  },
+  {
+    name: 'Projects',
+    href: '#projects'
+  },
+  {
+    name: 'Contact',
+    href: '#contact'
+  }
+]
+---
+
+<nav class="flex justify-between p-6">
+  <h1>Emily Tiry</h1>
+  <div class="menu-links">
+    <ul class="flex">
+      {links.map((link) => <li class="mx-6"><a href={link.href}>{link.name}</a></li>)}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+---
+import profile from '../assets/img/profile.jpg';
+import { Image } from 'astro:assets';
+// import Button from '@components/ui/Button.astro';
+---
+
+<section
+	class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
+>
+	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
+		<div>
+			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
+				Hi! My name is <span class="text-orange">Emily Tiry</span> and I'm a software developer based in Durham, North Carolina.
+			</h1>
+		</div>
+		<div class="mb-10">
+			<!-- <Button style={'primary'} size={'lg'} class={'flex'} name="learn more">Learn more</Button> -->
+		</div>
+	</div>
+	<div class="mb-10 flex w-1/2 items-center justify-center">
+		<Image
+			src={profile}
+			alt="Emily Tiry"
+			aspectRatio="4:4"
+			format="jpg"
+			width={300}
+			height={300}
+			loading="eager"
+      class="rounded-full"
+		/>
+	</div>
+</section>
