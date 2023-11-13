@@ -1,0 +1,66 @@
+---
+import { Icon } from 'astro-icon';
+
+const icons = [
+  {
+    name: 'JavaScript',
+    icon: 'javascript'
+  },
+  {
+    name: 'HTML',
+    icon: 'html5'
+  },
+  {
+    name: 'CSS',
+    icon: 'css3'
+  },
+  {
+    name: 'Python',
+    icon: 'python'
+  },
+  {
+    name: 'React',
+    icon: 'react'
+  },
+  {
+    name: 'Redux',
+    icon: 'redux'
+  },
+  {
+    name: 'Node',
+    icon: 'nodedotjs'
+  },
+  {
+    name: 'Express',
+    icon: 'express'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: 'postgresql'
+  },
+  {
+    name: 'MongoDB',
+    icon: 'mongodb'
+  }
+]
+---
+
+<section
+	id="skills"
+	class="mb-10 flex flex-col items-center justify-center md:mb-0 md:h-screen"
+>
+	<h2 class="text-2xl text-sky-950 lg:text-4xl">Skills</h2>
+	<span class="mb-10 h-1 w-10 bg-sky-950"></span>
+	<div class="mb-10 flex w-full flex-col flex-wrap justify-center md:flex-row md:w-1/2">
+    {icons.map((icon) => (
+      <div class="m-4 w-1/6 flex flex-col justify-items-center text-center grow duration-100 hover:scale-105 hover:transform">
+        <Icon
+		    class="h-8 text-sky-950 md:h-12"
+		    name={`simple-icons:${icon.icon}`}
+	      />
+        <p class="mb-2 text-sky-950">{icon.name}</p>
+      </div>
+    ))}
+
+	</div>
+</section>
