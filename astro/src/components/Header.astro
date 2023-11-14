@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon';
+
 const links = [
   {
     name: 'About',
@@ -20,10 +22,20 @@ const links = [
 ---
 
 <nav class="flex justify-between p-6 fixed top-0 left-0 right-0 bg-sky-950 z-10 shadow-lg">
-  <h1><a href="#" class="text-white hover:text-dark-yellow">Emily Tiry</a></h1>
+  <h1 class="flex items-center">
+    <Icon
+    class="h-8 text-white md:h-12"
+    name={'tabler:prompt'}
+    />
+    <a href="#" class="text-white hover:text-dark-yellow font-display text-3xl me-1">EMILY TIRY</a></h1>
   <div class="menu-links">
     <ul class="flex">
-      {links.map((link) => <li class="mx-6 "><a href={link.href} class="text-white hover:text-dark-yellow">{link.name}</a></li>)}
+      {links.map((link) => 
+        <li class="mx-6 ">
+          <a href={link.href} class="text-white hover:text-dark-yellow underline decoration-solid decoration-dark-yellow decoration-2 underline-offset-2">
+            {link.name}
+          </a>
+        </li>)}
     </ul>
   </div>
 </nav>
