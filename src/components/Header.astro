@@ -21,17 +21,19 @@ const links = [
 ]
 ---
 
-<nav class="flex justify-between p-6 fixed top-0 left-0 right-0 bg-sky-950 z-10 shadow-lg">
+<nav class="flex flex-wrap justify-between p-6 fixed top-0 left-0 right-0 bg-sky-950 z-10 shadow-lg">
   <h1 class="flex items-center">
     <Icon
     class="h-8 text-white md:h-12"
-    name={'tabler:prompt'}
+    name='tabler:prompt'
     />
-    <a href="#" class="text-white hover:text-dark-yellow font-display text-3xl me-1">EMILY TIRY</a></h1>
-  <div class="menu-links">
-    <ul class="flex">
+    <a href="#" class="text-white hover:text-dark-yellow font-display text-3xl me-1">EMILY TIRY</a>
+  </h1>
+  <Icon id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block text-white self-center" name='mdi:hamburger-menu' />
+  <div class="hidden w-full md:flex md:items-center md:justify-between md:w-auto" id="menu">
+    <ul class="md:flex md:justify-between pt-4 md:pt-0">
       {links.map((link) => 
-        <li class="mx-6 ">
+        <li class="md:mx-6">
           <a href={link.href} class="text-white hover:text-dark-yellow underline decoration-solid decoration-dark-yellow decoration-2 underline-offset-2">
             {link.name}
           </a>
@@ -39,3 +41,19 @@ const links = [
     </ul>
   </div>
 </nav>
+
+<script>
+  const hamburger = document.querySelector('#menu-button');
+  const menu = document.querySelector('#menu');
+  const links = document.querySelectorAll('li');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    })
+  })
+</script>
